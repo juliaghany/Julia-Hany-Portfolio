@@ -54,7 +54,7 @@ figure {
     background-image: url("challenge-2.jpg");
 }
 
-/* I wanted the background of the entire body of the webpage to be black, so I set that here */
+/* This is the body. I wanted the background of the entire body of the webpage to be black, so I set that here */
 body {
     background-color: var(--dark);
 }
@@ -72,7 +72,7 @@ main {
     border-radius: 100%;
     border: solid rgb(255, 255, 255);
 }
-
+/* I set the display to flex, justify-content to flex-start, font-size to 30px and padding to 30px, and color to white */
 h2 {
     display: flex;
     justify-content: flex-start;
@@ -80,7 +80,7 @@ h2 {
     padding: 30px;
     color: var(--light);
 }
-
+/* I set the display properties and added a background color to add a pop of color to my portfolio */
 .row-section {
     display: flex;
     padding: 2%;
@@ -101,7 +101,7 @@ h2 {
     display: flex;
     flex-direction: column;
 }
-
+/* I set the display property to flex and used justify-content to center my content, I also gave the images a border and positioned them as relative to the text over my images */
 .image-container {
     display: flex;
     justify-content: center;
@@ -134,7 +134,7 @@ h2 {
     justify-content: space-between;
 
 }
-
+/* I set the width to 45% to specify the width of the content in this container */
 #bottom .image-container {
     width: 45%
 }
@@ -159,7 +159,7 @@ a {
     color: var(--light);
     text-decoration: underline
 }
-/* I added media queries so that my webpage will have a responsive layout */
+/* I added media queries so that my webpage will have a responsive layout and be visually appealing to the user regardless of the size of their screen*/
 @media screen and (max-width:600px) {
     .row-section {
         flex-direction: column;
