@@ -3,7 +3,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* I used the :root pseudo-class to set the color for the background and text/borders because I wanted to mess around with different dark and light colors without having to change the value in each ruleset */
+/* I used the :root pseudo-class to set the color for the backgrounds and text/borders because I wanted to mess around with different dark and light colors without having to change the value in each ruleset */
 :root {
     --dark: rgb(0, 0, 0);
     --light: rgb(255, 255, 255);
@@ -21,43 +21,56 @@ header {
     background-color: var(--dark);
 
 }
-
+/* Here I set the font-size and color of the text in h1 */
 h1 {
     font-size: 50px;
     color: var(--light);
 
 }
+
 /* I used justify-content: flex-end to place the links to my navigation bar at the end of the webpage  */
 nav {
     display: flex;
     justify-content: flex-end;
     font-size: 30px;
 }
-
+/* I set the display to inline-block so that they list items in the nav bar would line up side by side */
 nav li {
     display: inline-block;
     margin-left: 20px;
 }
+
 /* I wanted to remove the underline in the navbar because I liked the way that it looked without the underline, so I used an ID selector to do so */
 #remove-underline {
     text-decoration: none;
     color: var(--light);
 
 }
+
 /* I wanted to add a photo of my artwork to break up the header and the body of the webpage, so I used a figure element and background-image */
 figure {
     height: 300px;
     width: 100%;
     background-image: url("challenge-2.jpg");
 }
+
 /* I wanted the background of the entire body of the webpage to be black, so I set that here */
 body {
     background-color: var(--dark);
 }
+
 /* I added height and padding values to space things out and improve the appearnace of my portfolio */
 main {
     height: 1000px;
     padding: 5%;
+}
+
+/* I set the height and width of my image, I gave it a border-radius of 100% to make it a circle, and I added a solid white border for style purposes */
+.my-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: solid rgb(255, 255, 255);
 }
 
 h2 {
@@ -68,13 +81,6 @@ h2 {
     color: var(--light);
 }
 
-.my-image {
-    height: 200px;
-    width: 200px;
-    border-radius: 100%;
-    border: solid rgb(255, 255, 255);
-}
-
 .row-section {
     display: flex;
     padding: 2%;
@@ -82,20 +88,21 @@ h2 {
     margin-bottom: 5px;
     border-radius: 20px;
 }
-.row-section > h2{
+/* I set the class row-section for h2 to have a width of 25% */
+.row-section>h2 {
     width: 25%;
 }
-
-.row-section > section {
+/* I set the class row-section for section to have a width of 75%*/
+.row-section>section {
     width: 75%;
 }
-
+/* I set the class my-work to flex-direction: column to specify that I want these items to be in columns */
 .my-work {
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-.image-container{
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,62 +117,71 @@ h2 {
     border: solid var(--light);
     color: var(--light);
     font-size: 25px;
-    left:0;
-    bottom:5%;
-}
-/* I added a solid white border around the image for decoration purposes */
-.image-container img {
-    height: 100%;
- width: 100%;
+    left: 0;
+    bottom: 5%;
 }
 
+/* I set the height and width of the image to 100% so that it would take up the whole space of the container */
+.image-container img {
+    height: 100%;
+    width: 100%;
+}
+
+/* I added an ID selector to make the bottom images in the "My Work" section to wrap and have equal space between them and make them wrap instead of go into a straight line */
 #bottom {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
 }
+
 #bottom .image-container {
     width: 45%
 }
-/* I added padding and margin properties to place the text where I wanted it on the page, and I changed the font size and color to make it look the way I wanted it to */
+
+/* I added padding properties to place the text where I wanted it on the page, and I changed the font size and color to make it look the way I wanted it to */
 p {
     padding: 25px;
-    margin-left: 20%;
     font-size: 20px;
     color: var(--light);
     line-height: 1.5;
 }
+
 /* I changed the color of the text in the anchor tags to achieve the look that I was going for */
 a {
     color: var(--light);
 }
-/* I changed the size of the text so that my contact info was large enough to read without stacking on top of each other, and I changed the color of the text and added underlines to achieve the look that I wanted */
+
+/* I changed the color of the text and added underlines to achieve the look that I wanted */
 .contact-info p {
-    
+
     font-size: 20px;
-    display: inline-block;
     color: var(--light);
     text-decoration: underline
 }
-
+/* I added media queries so that my webpage will have a responsive layout */
 @media screen and (max-width:600px) {
-    .row-section{
+    .row-section {
         flex-direction: column;
     }
-    .row-section > h2 {
+
+    .row-section>h2 {
         width: 100%;
     }
-    .row-section > section {
+
+    .row-section>section {
         width: 100%
     }
+
     .image-container text {
         font-size: 16px;
     }
-    #bottom{
+
+    #bottom {
         flex-direction: column;
     }
-    #bottom .image-container{
+
+    #bottom .image-container {
         width: 100%;
     }
 
