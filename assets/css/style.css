@@ -1,24 +1,33 @@
+/* I wanted the font to be the same throughout the entire webpage, so I used a universal selector to set the type of font for all the text */
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* I used the :root pseudo-class to set the color for the background and text/borders because I wanted to mess around with different dark and light colors without having to change the value in each ruleset */
+:root {
+    --dark: rgb(0, 0, 0);
+    --light: rgb(255, 255, 255);
+    --backdrop: #05C7F2
+}
+
+/* I used display: flex, justify-content: space-between, and align-items: center to improve the visual appearance of my header
+I also added light text and a dark background to achieve the look that I was going for  */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3%;
-    color: white;
-    background-color: aquamarine;
+    color: var(--light);
+    background-color: var(--dark);
 
 }
 
 h1 {
-    display: inline-block;
     font-size: 50px;
-    color: black;
+    color: var(--light);
 
 }
-
+/* I used justify-content: flex-end to place the links to my navigation bar at the end of the webpage  */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -28,41 +37,136 @@ nav {
 nav li {
     display: inline-block;
     margin-left: 20px;
-    color: black;
 }
+/* I wanted to remove the underline in the navbar because I liked the way that it looked without the underline, so I used an ID selector to do so */
+#remove-underline {
+    text-decoration: none;
+    color: var(--light);
 
+}
+/* I wanted to add a photo of my artwork to break up the header and the body of the webpage, so I used a figure element and background-image */
 figure {
-    height: 200px;
+    height: 300px;
     width: 100%;
     background-image: url("challenge-2.jpg");
 }
-
+/* I wanted the background of the entire body of the webpage to be black, so I set that here */
 body {
-    background-color: skyblue;
+    background-color: var(--dark);
 }
+/* I added height and padding values to space things out and improve the appearnace of my portfolio */
 main {
-    height: 600px;
+    height: 1000px;
     padding: 5%;
 }
 
 h2 {
-    margin-left: 15%;
+    display: flex;
+    justify-content: flex-start;
     font-size: 30px;
     padding: 30px;
+    color: var(--light);
 }
 
-main section img {
+.my-image {
     height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: solid rgb(255, 255, 255);
 }
+
+.row-section {
+    display: flex;
+    padding: 2%;
+    background-color: var(--backdrop);
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+.row-section > h2{
+    width: 25%;
+}
+
+.row-section > section {
+    width: 75%;
+}
+
+.my-work {
+    display:flex;
+    flex-direction: column;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--light);
+    position: relative;
+}
+
+/* I used positioning to place the text for this image where I wanted it to be, and I gave the text a solid white border in hopes to make it stand out more */
+.image-container text {
+    position: absolute;
+    background-color: var(--dark);
+    border: solid var(--light);
+    color: var(--light);
+    font-size: 25px;
+    left:0;
+    bottom:5%;
+}
+/* I added a solid white border around the image for decoration purposes */
+.image-container img {
+    height: 100%;
+ width: 100%;
+}
+
+#bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+#bottom .image-container {
+    width: 45%
+}
+/* I added padding and margin properties to place the text where I wanted it on the page, and I changed the font size and color to make it look the way I wanted it to */
 p {
     padding: 25px;
     margin-left: 20%;
     font-size: 20px;
+    color: var(--light);
+    line-height: 1.5;
 }
-
+/* I changed the color of the text in the anchor tags to achieve the look that I was going for */
+a {
+    color: var(--light);
+}
+/* I changed the size of the text so that my contact info was large enough to read without stacking on top of each other, and I changed the color of the text and added underlines to achieve the look that I wanted */
 .contact-info p {
-
+    
     font-size: 20px;
     display: inline-block;
-    text-decoration: underline;
+    color: var(--light);
+    text-decoration: underline
+}
+
+@media screen and (max-width:600px) {
+    .row-section{
+        flex-direction: column;
+    }
+    .row-section > h2 {
+        width: 100%;
+    }
+    .row-section > section {
+        width: 100%
+    }
+    .image-container text {
+        font-size: 16px;
+    }
+    #bottom{
+        flex-direction: column;
+    }
+    #bottom .image-container{
+        width: 100%;
+    }
+
 }
