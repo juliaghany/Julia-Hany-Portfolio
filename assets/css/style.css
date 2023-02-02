@@ -19,8 +19,8 @@ header {
     padding: 3%;
     color: var(--light);
     background-color: var(--dark);
-
 }
+
 /* Here I set the font-size and color of the text in h1 */
 h1 {
     font-size: 50px;
@@ -28,12 +28,11 @@ h1 {
 
 }
 
-/* I used justify-content: flex-end to place the links to my navigation bar at the end of the webpage  */
+/* I changed the font to 30px here so that the text isn't as large as my h1 */
 nav {
-    display: flex;
-    justify-content: flex-end;
     font-size: 30px;
 }
+
 /* I set the display to inline-block so that they list items in the nav bar would line up side by side */
 nav li {
     display: inline-block;
@@ -54,6 +53,14 @@ figure {
     background-image: url("challenge-2.jpg");
 }
 
+/* I set the height and width of my image, I gave it a border-radius of 100% to make it a circle, and I added a solid white border for style purposes */
+.my-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: solid rgb(255, 255, 255);
+}
+
 /* This is the body. I wanted the background of the entire body of the webpage to be black, so I set that here */
 body {
     background-color: var(--dark);
@@ -65,13 +72,6 @@ main {
     padding: 5%;
 }
 
-/* I set the height and width of my image, I gave it a border-radius of 100% to make it a circle, and I added a solid white border for style purposes */
-.my-image {
-    height: 200px;
-    width: 200px;
-    border-radius: 100%;
-    border: solid rgb(255, 255, 255);
-}
 /* I set the display to flex, justify-content to flex-start, font-size to 30px and padding to 30px, and color to white */
 h2 {
     display: flex;
@@ -80,6 +80,7 @@ h2 {
     padding: 30px;
     color: var(--light);
 }
+
 /* I set the display properties and added a background color to add a pop of color to my portfolio */
 .row-section {
     display: flex;
@@ -88,19 +89,17 @@ h2 {
     margin-bottom: 5px;
     border-radius: 20px;
 }
+
 /* I set the class row-section for h2 to have a width of 25% */
 .row-section>h2 {
     width: 25%;
 }
+
 /* I set the class row-section for section to have a width of 75%*/
 .row-section>section {
     width: 75%;
 }
-/* I set the class my-work to flex-direction: column to specify that I want these items to be in columns */
-.my-work {
-    display: flex;
-    flex-direction: column;
-}
+
 /* I set the display property to flex and used justify-content to center my content, I also gave the images a border and positioned them as relative to the text over my images */
 .image-container {
     display: flex;
@@ -110,7 +109,8 @@ h2 {
     position: relative;
 }
 
-/* I used positioning to place the text for this image where I wanted it to be, and I gave the text a solid white border in hopes to make it stand out more */
+/* I used positioning to place the text for this image where I wanted it to be, and I gave the text a solid white border in hopes to make it stand out more
+I also positioned the text so that it would appear over the image where I wanted it to.  */
 .image-container text {
     position: absolute;
     background-color: var(--dark);
@@ -125,6 +125,12 @@ h2 {
 .image-container img {
     height: 100%;
     width: 100%;
+    opacity: 1.0;
+}
+
+/* I used the :hover pseudo-element to change the opacity of the images in the "my work" section in hopes to make it clear that it's a clickable link */
+.image-container img:hover {
+    opacity: 0.6;
 }
 
 /* I added an ID selector to make the bottom images in the "My Work" section to wrap and have equal space between them and make them wrap instead of go into a straight line */
@@ -134,9 +140,11 @@ h2 {
     justify-content: space-between;
 
 }
-/* I set the width to 45% to specify the width of the content in this container */
+
+/* I set the width to 45% to specify the width of the content in this container and I added margin-top to space out the images */
 #bottom .image-container {
-    width: 45%
+    width: 45%;
+    margin-top: 45px;
 }
 
 /* I added padding properties to place the text where I wanted it on the page, and I changed the font size and color to make it look the way I wanted it to */
@@ -152,13 +160,12 @@ a {
     color: var(--light);
 }
 
-/* I changed the color of the text and added underlines to achieve the look that I wanted */
-.contact-info p {
-
+/* I changed the font size and color of the text to white achieve the look that I wanted */
+.contact-info section p {
     font-size: 20px;
     color: var(--light);
-    text-decoration: underline
 }
+
 /* I added media queries so that my webpage will have a responsive layout and be visually appealing to the user regardless of the size of their screen*/
 @media screen and (max-width:600px) {
     .row-section {
@@ -184,5 +191,4 @@ a {
     #bottom .image-container {
         width: 100%;
     }
-
 }
