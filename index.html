@@ -16,16 +16,17 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#about-me">About Me</a>
+                    <a href="#about-me" id="remove-underline">About Me</a>
                 </li>
                 <li>
-                    <a href="#my-work">Work</a>
+                    <a href="#my-work" id="remove-underline">Work</a>
                 </li>
+                <!-- I've commented out the resume portion of my portfolio because I don't have a resume just yet, but I want to add it in the future -->
+                <!-- <li> -->
+                <!-- <a href="#my-resume" id="remove-underline">Resume</a> -->
+                <!-- </li> -->
                 <li>
-                    <a href="#my-resume">Resume</a>
-                </li>
-                <li>
-                    <a href="#contact-me">Contact Me</a>
+                    <a href="#contact-me" id="remove-underline">Contact Me</a>
                 </li>
             </ul>
         </nav>
@@ -33,30 +34,67 @@
     </header>
     <figure></figure>
     <main>
-        <section id="about-me">
-            <img src="./assets/images/picture-of-me.jpg" />
-            <h2>About Me</h2>
-            <p> My name is Julia Hany and I am twenty-six years old. I have been learning about computer coding for
-                about two weeks now. Prior to this, I had no experience with it. My hobbies are playing music, hiking,
-                and making art. I included a photo of one of my art pieces below the header of this webpage.
-            </p>
+        <img class="my-image" src="./assets/images/picture-of-me.jpg" alt="Picture of Julia Hany" />
+        <section class="row-section" id="about-me">
+
+            <h2>About Me:</h2>
+            <section class="text-section">
+                <p> My name is Julia Hany and I am twenty-six years old. I am from and currently reside in Bloomington,
+                    Illinois. I have been learning about computer coding for
+                    about three weeks now. Prior to this, I had no experience with it. My hobbies are playing music,
+                    hiking,
+                    and making art. I included a photo of one of my art pieces below the header of this webpage.
+                </p>
+            </section>
         </section>
-        <section id="my-work">
-            <h2>Work</h2>
-            <p>Refactoring Code</p>
+        <section class="row-section" id="my-work">
+            <h2>My Work:</h2>
+            <section class="my-work">
+                <div id="top">
+                    <a class="image-container" href=" https://juliaghany.github.io/Refactoring-Code/">
+                        <img src="./assets/images/first-project.JPG"
+                            alt="Screenshot of the webpage Horiseon, which was Julia Hany's first coding project">
+                        <text>Refactoring Code</text>
+                    </a>
+                </div>
+                <!-- In the div below, I added placeholder images so that I can add images of my future projects connected to a link. I also added alt attributes for each image -->
+                <div id="bottom">
+                    <a class="image-container" href="#"">
+                        <img src=" ./assets/images/waterfall.JPG" alt="Rocks with green moss and a waterfall">
+                        <text>Waterfall</text>
+                    </a>
+                    <a class="image-container" href="#">
+                        <img src="./assets/images/artwork.JPG"
+                            alt="Black background with bubbles of colors like yellow, purple, pink, and green">
+                        <text>Artwork</text>
+                    </a>
+                    <a class="image-container" href="#">
+                        <img src="./assets/images/luna-moth.JPG" alt="A green, luna moth on a hand">
+                        <text>Luna Moth</text>
+                    </a>
+                    <a class="image-container" href="#">
+                        <img src="./assets/images/waves.JPG"
+                            alt="An orange and pink sunset with waves crashing on the beach">
+                        <text>Waves</text>
+                    </a>
+                </div>
+
+            </section>
         </section>
-        <section id="my-resume">
-            <h2>Resume</h2>
-        </section>
-        <section id="contact-me" class="contact-info">
-            <h2>Contact Me</h2>
-            <p>217-418-xxxx</p>
-            <p>
-                <a href="mailto:">juliaghany@msn.com</a>
-            </p>
-            <p>
-                <a href="https://github.com/juliaghany">GitHub</a>
-            </p>
+        <!-- <section id="my-resume"> -->
+        <!-- <h2>Resume</h2> -->
+        <!-- </section> -->
+        <section id="contact-me" class="row-section" class="contact-info">
+            <h2>Contact Me:</h2>
+            <section>
+                <p>217-418-xxxx</p>
+                <p>
+                    <a href="mailto:">juliaghany@msn.com</a>
+                </p>
+                <p>
+                    <a href="https://github.com/juliaghany">GitHub</a>
+                </p>
+            </section>
         </section>
     </main>
 
