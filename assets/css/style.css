@@ -33,14 +33,14 @@ nav {
     font-size: 30px;
 }
 
-/* I set the display to inline-block so that they list items in the nav bar would line up side by side */
+/* I set the display as inline-block and margin-left so that the list items were spaced out */
 nav li {
     display: inline-block;
     margin-left: 20px;
 }
 
 /* I wanted to remove the underline in the navbar because I liked the way that it looked without the underline, so I used an ID selector to do so */
-#remove-underline {
+.remove-underline {
     text-decoration: none;
     color: var(--light);
 
