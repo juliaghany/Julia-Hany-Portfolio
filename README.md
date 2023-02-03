@@ -1,6 +1,6 @@
 # Julia Hany's Portfolio
 
-![Model](assets/images/_C__Users_julia_OneDrive_Documents_bootcamp_challenge-2_index.html.png)
+![Model](https://user-images.githubusercontent.com/121564618/216643856-c5bcda6b-37e3-4d8e-95ac-d6236d5dc197.png)
 
 ## Description 
 
@@ -23,5 +23,3 @@
 - I used information in this website to change the opacity of the images in the "my work" section when you hover over it: https://www.w3schools.com/css/css_image_transparency.asp
 - My tutor, Alexis Gonzalez, helped me add and understand media queries to make my webpage responsive, which allowed my webpage to be visually appealing regardless of the size of the screen it was being viewed on. He also helped me understand the relationship between parent and child elements so that I could target certain sections in my document to make the elements behave the way I wanted them to. He helped me add a backdrop to my sections so that I could add some more color to my portfolio. He also showed me how to add the placeholder images and position them in a way that was similar to the mock-up. 
 - I used the reset.css file from activity 12 in the module 2 activities as my reset.css file. 
-
-[def]: _C__Users_julia_OneDrive_Documents_bootcamp_challenge-2_index.html.png
